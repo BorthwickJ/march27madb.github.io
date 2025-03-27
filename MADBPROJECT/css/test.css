@@ -1,0 +1,847 @@
+/* Ensure the body and html are set to full height */
+
+
+
+
+
+
+
+body {
+  background: linear-gradient(135deg, #063970, #042c5c); /* Blue gradient background */
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  line-height: 1.6;
+  padding: 1em 1em 2em;
+  align-content: center;
+}
+/* Default background for PC (larger screens) */
+body {
+  background: linear-gradient(135deg, #063970, #042c5c); /* Blue gradient background */
+  color: white; /* Ensure text is readable on the blue background */
+}
+
+/* Remove the blue background on mobile (smaller screens) */
+@media (max-width: 768px) {
+  body {
+    background: white; /* Set a white background for mobile */
+    color: black; /* Adjust text color for readability on white background */
+  }
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+
+
+}
+
+/* Ensure the navbar, hero, and other sections use the main container */
+
+.hero .container-center,
+.content-row {
+  max-width: 1200px; /* Ensure consistency */
+  width: 100%;
+  margin: 0 auto; /* Center the content */
+  padding: 0 20px; /* Optional padding */
+}
+
+
+
+
+.hero, .post-it-container {
+  padding: 0 20px; /* This ensures both sections have the same padding */
+  margin: 0 auto; /* Keep it centered */
+}
+
+.post-it-container {
+  max-width: 1200px; /* Ensure the post-it container matches the hero section width */
+  width: 100%; /* Ensure it takes up the full width available */
+}
+
+/* Optional: Adding some additional styles to align things properly */
+.hero .container-center,
+.post-it-container {
+  padding: 0 20px;
+}
+
+
+
+/* Navbar styles */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  padding: 2.5rem;
+  box-shadow: 0px 0px 10px #cfd8dc;
+  z-index: 2;
+}
+
+
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-left: auto;
+}
+
+.nav-item {
+  margin-right: 2rem;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: #0073e6;
+  transition: all 200ms ease-in;
+  font-size: 18px;
+}
+
+.nav-item a:hover {
+  color: black;
+}
+
+.menu-toggle {
+  display: none; /* Hidden by default */
+  font-size: 52px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 15px; /* Adjust so it's always visible */
+  right: 25px;
+  z-index: 4; /* Ensure it's above the dropdown */
+}
+
+/* Media Query for Mobile */
+@media screen and (max-width: 1044px) {
+  .menu-toggle {
+    display: block; /* Show menu button */
+    font-size: 30px;
+    top: 40px;
+    right: 30px;
+   
+  }
+
+  .nav-list {
+    display: none; /* Hide menu initially */
+    flex-direction: column;
+    position: absolute;
+    top: 30px;
+    right: 10px;
+    background: white;
+    box-shadow: 0px 2px 6px rgba(207, 216, 220, 0.5);
+    width: 280px;
+    border-radius: 5px;
+    z-index: 3;
+   
+  }
+
+  .nav-list.active {
+    display: flex; /* Show menu when active */
+  }
+
+  .nav-item {
+    margin: 0;
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  .nav-item a {
+    font-size: 16px;
+  }
+  .nav-item a:hover {
+    color: #0073e6; /* Change color on hover */
+    text-decoration: underline; /* Optional underline effect */
+  }
+  .nav-list {
+    opacity: 0; /* Start invisible */
+    transition: right 0.3s ease, opacity 0.3s ease; /* Add opacity transition */
+  }
+  
+  .nav-list.active {
+    opacity: 1; /* Fully visible when active */
+  }
+}
+
+/* Hero styles */
+/* Hero styles */
+.hero {
+min-height: 90vh; /* Ensure all hero sections are at least 100% of the viewport height */
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+background-size: cover; /* Ensure the background image covers the entire hero section */
+background-position: center;
+text-align: center; /* Center the text */
+color: white;
+position: relative;
+padding: 0 20px; /* Add padding to avoid text touching edges */
+
+}
+
+.
+
+.hero .container-center {
+width: 100%;
+max-width: 1200px;
+padding: 0 20px;
+}
+
+/* Add a dark overlay to improve text visibility */
+.hero::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+z-index: 0; /* Ensure the overlay is behind the text and button */
+}
+
+/* Ensure the text sits above the overlay */
+.hero h1 {
+z-index: 1; /* Make sure text is above the overlay */
+position: relative; /* Ensure it's on top of the overlay */
+margin-bottom: 20px; /* Add space below the heading */
+color: white;
+font-size: 3rem;
+z-index: 1;
+text-align: center; /* Center the text */
+}
+
+/* Ensure the paragraph text stays centered and within the hero image */
+.hero p {
+z-index: 1; /* Make sure text is above the overlay */
+position: relative; /* Ensure it's on top of the overlay */
+color: white;
+font-size: 1.8rem;
+margin: 10px 0;
+max-width: 90%; /* Ensure the text doesn't exceed the width of the hero */
+text-align: center; /* Center the text */
+}
+
+/* Button Styles */
+.hero button {
+z-index: 2; /* Ensure button is above the overlay */
+position: relative; /* To be sure it sits above the overlay */
+padding: 10px 20px;
+background-color: #FE1D37; /* Button color */
+border: none;
+color: white;
+font-size: 20px;
+cursor: pointer;
+border-radius: 5px;
+transition: background-color 0.3s ease;
+margin-top: 20px;
+}
+
+.hero button:hover {
+background-color: #e65b50; /* Button hover effect */
+}
+
+/* Media Query for Mobile */
+@media screen and (max-width: 768px) {
+.hero h1 {
+  font-size: 2.5rem; /* Adjust heading size for smaller screens */
+}
+
+.hero p {
+  font-size: 1.5rem; /* Adjust paragraph size for smaller screens */
+  max-width: 100%; /* Ensure the text doesn't exceed the width of the hero */
+}
+
+.hero button {
+  font-size: 18px; /* Adjust button size for smaller screens */
+}
+}
+
+
+/
+
+
+
+
+.hero-1 .hero {
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  background-image: url("https://www.pcworld.com/wp-content/uploads/2023/08/shutterstock_370595594.jpg?quality=50&strip=all");
+  position: relative;
+  text-align: center;
+}
+
+.hero-2 .hero {
+  min-height: 90vh; /* Full viewport height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  background-image: url("Hero_2.png");
+  position: relative;
+}
+.hero-3 .hero {
+  min-height: 90vh; /* Ensures the hero section is at least 100% of the viewport height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  background-image: url("Hero 2.png");
+  position: relative;
+  padding: 0 20px; /* Optional padding to avoid text touching edges */
+}
+
+
+.hero-4 .hero {
+    
+    min-height: 90vh; /* Ensures the hero section is at least 100% of the viewport height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  background-image: url("Hero_4.png");
+  position: relative;
+  padding: 0 20px; 
+    
+}
+
+.hero-5 .hero {
+    
+  min-height: 90vh; /* Ensures the hero section is at least 100% of the viewport height */
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+background-size: cover;
+background-position: center;
+background-image: url("Hero_5.png");
+position: relative;
+padding: 0 20px; 
+  
+}
+
+
+/* Flex container styles */
+.flex-container {
+  display: flex;
+  justify-content: center;
+  height: 200px;
+  flex-wrap: wrap;
+  align-content: stretch;
+}
+
+.flex-container > div {
+  flex-basis: 220px;
+  height: 120px;
+  background: white;
+  color: black;
+  margin: 10px;
+  padding: 20px;
+  font-size: 24px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.flex-container > div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer styles */
+.footer {
+  background: linear-gradient(to right, #042c5c, #063970);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 16px;
+  box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+body {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.content-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 40px;
+  background-color: #ffffff; /* White background */
+  flex-wrap: wrap; /* Allow wrapping of items when screen is smaller */
+  gap: 20px; /* Space between elements */
+  width: 100%; /* Make it full width */
+   /* Make it full height */
+  margin: 0 auto; /* Center the content */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+min-height: 30vh;
+
+}
+
+
+/* Reverse the content in the second row */
+.content-row.reverse {
+  flex-direction: row-reverse; /* This reverses the order of text and image */
+}
+
+/* Style for text section */
+.text-section {
+  flex-basis: 45%; /* Takes up about 45% of the row */
+  padding: 20px;
+}
+
+.text-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.text-section p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.content-heading {
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+
+
+/* Reverse layout for alternating sections */
+.content-row.reverse {
+flex-direction: row-reverse;
+}
+
+/* Style for text section */
+.text-section {
+flex: 1; /* Allow flexible resizing */
+min-width: 45%; /* Prevent text from getting too narrow */
+padding: 20px;
+box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+/* Style for image section */
+.image-section {
+flex: 1; /* Allow flexible resizing */
+min-width: 45%; /* Prevent image from getting too small */
+display: flex;
+justify-content: center;
+align-items: center;
+box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+/* Image Styling */
+.image-section img {
+width: 100%; /* Make image fill its container */
+max-width: 700px; /* Prevent it from getting too large */
+height: auto;
+object-fit: contain; /* Prevent stretching */
+border-radius: 8px; /* Optional styling */
+}
+.image-section .small-image {
+width: 30%; /* Adjust the width as needed */
+max-width: 200px; /* Set a maximum width */
+height: auto; /* Maintain aspect ratio */
+display: block; /* Ensure the image is a block element */
+margin: 0 auto; /* Center the image horizontally */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+.content-row {
+  flex-direction: column; /* Stack content vertically */
+  text-align: left;
+}
+
+.text-section,
+.image-section {
+  flex-basis: 100%; /* Ensure both sections take full width */
+  max-width: 100%;
+  padding: 10px;
+  text-align: left;
+}
+
+.image-section img {
+  width: 100%; /* Ensure it scales properly */
+  max-width: 350px; /* Keep image at a good size */
+  margin-bottom: 20px;
+}
+}
+
+/* Fullscreen monitor responsiveness */
+@media (min-width: 1200px) {
+.content-row {
+  max-width: 100%; /* Extend to full width */
+  padding: 0 40px; /* Add padding to push content in */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.text-section,
+.image-section {
+  padding: 60px; /* Add padding to sections */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  
+
+}
+
+body {
+  font-size: 1.3rem;
+
+
+
+}
+
+.text-section ul {
+  padding: 0; /* Remove default padding */
+  margin: 0 auto; /* Center the list */
+  display: inline-block; /* Make the list behave like inline content */
+  text-align: left; /* Keep the bullets aligned to the left */
+}
+
+.text-section ul li {
+  margin-bottom: 10px; /* Add spacing between list items */
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Default styling for the scroll arrow */
+.scroll-arrow {
+  position: absolute; /* Ensure it's positioned relative to the hero section */
+  bottom: 35px; /* Position it near the bottom of the hero */
+  left: 50%; /* Center it horizontally */
+  transform: translateX(-50%); /* Adjust for centering */
+  font-size: 3rem; /* Default size */
+  color: white; /* Blue color */
+  cursor: pointer;
+  animation: bounce 1.5s infinite; /* Add bounce animation */
+}
+
+/* Bounce animation for the arrow */
+@keyframes bounce {
+  0%, 100% {
+    transform: translate(-50%, 0); /* Center horizontally */
+  }
+  50% {
+    transform: translate(-50%, -10px); /* Move up slightly */
+  }
+}
+.scroll-arrow:hover {
+  transform: translateX(-50%) scale(1.2); /* Slightly enlarge on hover */
+  color: #0073e6; /* Change color to blue on hover */
+}
+
+/* Active (pressed) state for the arrow */
+.scroll-arrow:active {
+  color: #005bb5; /* Darker blue when pressed */
+  transform: translateX(-50%) scale(1.1); /* Slightly shrink when pressed */
+}
+/* Adjust the arrow for smaller screens */
+@media (max-width: 768px) {
+  .scroll-arrow {
+    bottom: 35px; /* Move it closer to the bottom */
+    font-size: 1.5rem; /* Reduce the size of the arrow */
+  }
+}
+
+
+
+.post-it {
+  background: #92DFF3; /* Post-it note color */
+  color: #333;
+  padding: 20px;
+  flex: 1 1 30%; /* Flex-grow, flex-shrink, and flex-basis for responsiveness */
+  max-width: 300px; /* Set a maximum width */
+  height: auto; /* Maintain aspect ratio */
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  transform: rotate(-5deg); /* Slight rotation for a post-it note effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 40px; /* Add margin to create space between post-it notes */
+}
+
+.post-it:hover {
+  transform: rotate(0deg) scale(1.1); /* Remove rotation and scale up on hover */
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.post-it h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.post-it p {
+  font-size: 1rem;
+}
+
+/* Mobile responsiveness */
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .content-row {
+    flex-direction: column; /* Stack content vertically */
+    text-align: center;
+    padding: 40px 20px; /* Adjust padding for smaller screens */
+  }
+
+  .post-it {
+    width: 80%; /* Adjust the width for smaller screens */
+    max-width: 100%;
+    margin: 20px auto;
+  }
+}
+@media (max-width: 480px) {
+  .card {
+    flex: 1 1 100%; /* Make cards take up the full width on smaller screens */
+    max-width: 100%;
+  }
+}
+
+.card {
+  flex: 1 1 calc(28% - 20px); /* Adjust width for responsiveness */
+  max-width: calc(28% - 20px); /* Ensure cards don't exceed the width */
+  min-height: 290px;
+  background: #ffffff; /* Clean white background */
+  color: #333333; /* Dark gray text for readability */
+  box-sizing: border-box; /* Include padding and border in the card's width */
+  padding: 30px 20px; /* Add consistent padding */
+  border: 1px solid #dddddd; /* Light gray border for structure */
+  border-radius: 8px; /* Slightly rounded corners for a modern look */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  margin: 20px; /* Space between cards */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+  border-left: 5px solid #0073e6;
+}
+
+.card:hover {
+  transform: scale(1.03); /* Slightly enlarge on hover */
+  box-shadow: 0px 6px 15px rgba(0, 115, 230, 0.4); /* Enhance shadow on hover */
+}
+
+.card h2 {
+  font-size: 1.5rem; /* Larger heading for emphasis */
+  margin-bottom: 10px;
+  color: #0073e6; /* Professional blue for headings */
+}
+
+.card p {
+  font-size: 1rem; /* Standard body text size */
+  line-height: 1.6; /* Improve readability */
+  color: #555555; /* Softer gray for body text */
+}
+
+.card button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #0073e6; /* Accent color for buttons */
+  color: #ffffff; /* White text for contrast */
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.custom-card p {
+  margin-top: 54px; /* Move the paragraph down by 20px */
+}
+
+
+.card button:hover {
+  background-color: #005bb5; /* Darker blue on hover */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+@media (max-width: 768px) {
+  .card {
+    flex: 1 1 100%; /* Make each card take up the full width */
+    max-width: 100%; /* Ensure cards don't exceed the container width */
+  }
+}
+@media (max-width: 1024px) {
+  .content-row {
+    flex-direction: column; /* Stack the boxes vertically */
+    align-items: center; /* Center the boxes horizontally */
+  }
+
+  .card {
+    flex: 1 1 100%; /* Make each card take up the full width */
+    max-width: 100%; /* Ensure the card doesn't exceed the container width */
+    margin-bottom: 20px; /* Add spacing between stacked cards */
+  }
+}
+.content-row h2 {
+  color: #0073e6; /* Blue color for content headings */
+}
+
+.content-row h3  {
+  color: #0073e6; /* Blue color for content headings */
+}
+
+.text-section ul {
+  list-style-type: none; /* Use disc bullets */
+  margin: 0 auto; /* Center the list */
+  padding: 0; /* Remove default padding */
+  display: inline-block; /* Make the list behave like inline content */
+  text-align: left; /* Align the bullets and text to the left */
+  color: #333; /* Darker text for readability */
+  font-size: 1rem; /* Standard font size */
+  line-height: 1.8; /* Add spacing between lines for readability */
+  
+}
+.text-section ul {
+  border-left: 4px solid #0073e6; /* Blue line on the left side of the list */
+  padding-left: 20px;
+}
+
+.text-section ul li {
+  margin-bottom: 10px; /* Add spacing between list items */
+  padding-left: 20px; /* Add padding to align text with bullets */
+  position: relative; /* Position for custom bullet styling */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.text-section ul li::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid #0073e6; /* Blue border */
+  background-color: transparent;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+.text-section ul li:hover {
+  color: #005bb5; /* Darker blue on hover */
+  cursor: pointer; /* Change cursor to pointer */
+  transform: translateX(5px);
+}
+
+/* Back to Top Button */
+.back-to-top {
+  position: fixed; /* Fix the button to the viewport */
+  bottom: 20px; /* Position it 20px from the bottom */
+  right: 20px; /* Position it 20px from the right */
+  background-color: #FE1D37; /* Blue background */
+  color: white; /* White text */
+  border: none; /* Remove border */
+  border-radius: 50%; /* Make it circular */
+  width: 50px; /* Set width */
+  height: 50px; /* Set height */
+  font-size: 18px; /* Font size for the arrow */
+  cursor: pointer; /* Pointer cursor on hover */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+  display: none; /* Hide the button by default */
+  z-index: 1000; /* Ensure it appears above other elements */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth fade-in/out and hover effect */
+}
+
+.back-to-top:hover {
+  background-color: #e65b50; /* Darker blue on hover */
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+/* Optional: Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .back-to-top {
+    width: 40px; /* Smaller button for mobile */
+    height: 40px;
+    font-size: 16px;
+  }
+}
+
+.card a {
+  display: block; /* Make the link cover the entire card */
+  text-decoration: none; /* Remove underline from links */
+  color: inherit; /* Inherit the text color from the card */
+  height: 100%; /* Ensure the link spans the full height of the card */
+  width: 100%; /* Ensure the link spans the full width of the card */
+}
+
+.card a:hover {
+  text-decoration: none; /* Prevent underline on hover */
+}
+
+@media (min-width: 1025px) {
+  .back-to-top {
+    width: 90px; /* Larger button for PC users */
+    height: 90px;
+    font-size: 20px; /* Adjust font size for the arrow */
+    right: 33px;
+  }
+}
+
+@media (max-width: 768px) {
+  .text-section ul {
+    border-left: 1px solid #0073e6; /* Reduce the border thickness */
+    padding-left: 10px; /* Adjust padding to match the smaller border */
+  }
+
+  .text-section ul li::before {
+    width: 8px; /* Reduce the size of the custom bullet */
+    height: 8px;
+    border: 1px solid #0073e6; /* Reduce the bullet border thickness */
+  }

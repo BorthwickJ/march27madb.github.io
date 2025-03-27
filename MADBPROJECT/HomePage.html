@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Use this section for your webpage metadata - more detail https://www.w3schools.com/html/html_head.asp -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Homepage</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	
+    <link rel="stylesheet" href="css/test.css">
+
+
+
+
+    
+</head>
+
+<body class="hero-1">
+
+	<!-- begin the main section of the homepage -->
+	
+
+
+    <nav class="navbar">
+ 
+        
+       
+        <button class="menu-toggle">&#9776;</button>
+        <ul class="nav-list">
+            <li class="nav-item"><a href="HomePage.html">Home</a></li>
+            <li class="nav-item"><a href="About.html">About</a></li>
+            <li class="nav-item"><a href="Rise%20of%20Google.html">Rise of Google</a></li>
+            <li class="nav-item"><a href="Privacy.html">Privacy Issues</a></li>
+            <li class="nav-item"><a href="Innovation.html">Suppression of Innovation</a></li>
+        </ul>
+        </div>
+            </nav>
+        
+            <section class="hero" style="background-image: url('https://www.pcworld.com/wp-content/uploads/2023/08/shutterstock_370595594.jpg?quality=50&strip=all');">
+        
+           
+       
+        
+    <h1>Google - Too Powerful?</h1>
+    <p>Your data today, someone else's tomorrow</p>
+    <button onclick="window.location.href='about.html' ;">Discover more</button>
+       </div>
+       <div class="scroll-arrow" id="scrollArrow">
+        &#x2193; <!-- Downward Arrow Character -->
+      </div>
+           </section>
+       
+       
+           <div class="content-row">
+            <div class="card">
+              <h2>Google Knows Everything About You!</h2>
+              <p>Google collects ALL of your data such as name, age, gender, location, email address, and phone number.</p>
+            </div>
+            <div class="card">
+              <h2>Is Your Data Safe and is it Yours?</h2>
+              <p>Google have had numerous data leaks throughout their history. How safe is your data, and is it really yours?</p>
+            </div>
+            <div class="card">
+              <h2>Is it possible to escape Google?</h2>
+              
+              <p>From search to maps, emails to smart devices—Google is everywhere. How much of your life is really private?</p>
+
+</div>
+              <div class="content-row">
+                <div class="text-section">
+                  <h2>What Can You Do?</h2>
+                  <ul>
+                    <li>Use alternative search engines like DuckDuckGo or Startpage.</li>
+                    <li>Turn off location tracking in your Google account settings.</li>
+                    <li>Regularly review and delete your Google data.</li>
+                    <li>Use privacy-focused browsers like Brave or Firefox.</li>
+                    <li>Consider self-hosted email solutions instead of Gmail.</li>
+                  </ul>
+                </div>
+                <div class="image-section">
+                  <img src="images/privacy.png" alt="Image 1" />
+                </div>
+              </div>
+    <!-- Back to Top Button -->
+<button id="backToTop" class="back-to-top">↑ Top</button>
+              <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                  // Existing JavaScript for menu toggle
+                  const menuToggle = document.querySelector(".menu-toggle");
+                  const navList = document.querySelector(".nav-list");
+              
+                  menuToggle.addEventListener("click", function () {
+                    navList.classList.toggle("active");
+                  });
+              
+                  // Scroll functionality for the "Back to Top" button
+                  const backToTopButton = document.getElementById("backToTop");
+              
+                  // Show the button when the user scrolls down 100px
+                  window.addEventListener("scroll", function () {
+                    if (window.scrollY > 100) {
+                      backToTopButton.style.display = "block"; // Show the button
+                    } else {
+                      backToTopButton.style.display = "none"; // Hide the button
+                    }
+                  });
+              
+                  // Scroll back to the top when the button is clicked
+                  backToTopButton.addEventListener("click", function () {
+                    window.scrollTo({
+                      top: 0,
+                      behavior: "smooth", // Smooth scrolling
+                    });
+                  });
+              
+                  // Existing scroll functionality for the scroll arrow
+                  document.getElementById("scrollArrow").addEventListener("click", function () {
+                    window.scrollTo({
+                      top: window.innerHeight, // Scroll to the next section
+                      behavior: "smooth", // Smooth scrolling
+                    });
+                  });
+                });
+              </script>
+              </body>
+              </html>

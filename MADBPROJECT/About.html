@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Use this section for your webpage metadata - more detail https://www.w3schools.com/html/html_head.asp -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Homepage</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	
+    <link rel="stylesheet" href="css/test.css">
+
+
+
+
+    
+</head>
+
+<body class="hero-2">
+
+	<!-- begin the main section of the homepage -->
+	
+
+        
+    <nav class="navbar">
+        
+        <button class="menu-toggle">&#9776;</button>
+        <ul class="nav-list">
+            <li class="nav-item"><a href="HomePage.html">Home</a></li>
+            <li class="nav-item"><a href="About.html">About</a></li>
+            <li class="nav-item"><a href="Rise%20of%20Google.html">Rise of Google</a></li>
+            <li class="nav-item"><a href="Privacy.html">Privacy Issues</a></li>
+            <li class="nav-item"><a href="Innovation.html">Supression of Innovation</a></li>
+        </ul>
+    </nav>
+        
+   <section class="hero">
+       
+           <h1>About</h1>
+      
+    <p>Scroll down to learn about the purpose of this website</p>
+       
+      
+     <div class="scroll-arrow" id="scrollArrow">
+    &#x2193; <!-- Downward Arrow Character -->
+  </div>
+     </section>                   
+  
+
+    <div class="content-row">
+      <div class="card custom-card">
+        <a href="Rise of Google.html" class="card-link">
+        <h2>Rise of Google</h2>
+        <p>A brief look at the history of Google from their creation in 1998 to their expansion, looking at the Google product range such as Maps, Android and Gmail.</p>
+      </div>
+      <div class="card custom-card">
+        <a href="Privacy.html" class="card-link">
+        <h2>Privacy Issues</h2>
+        <p>Exploring Google and the numerous data leaks such as street view in 2010 and Google+ in 2018. Also, a discussion of the reporcussions and fines that Google had to pay.</p>
+      </a>
+      </div>
+      <div class="card custom-card">
+        <a href="Innovation.html" class="card-link">
+        <h2>Innovation Supression</h2>
+        
+        <p>Investigating how Google have negatively impacted innovation in the search engine industry, and how they have become a powerful and dangerous monopoly.</p>
+    </a>
+        </div>
+        <div class="content-row">
+  <div class="text-section">
+  <h2>Aim of This Website</h2>
+      <p>The aim of this website is to explore the rise of Google from a simple search engine to a dominant force in the online world. By looking at Privacy issues and the Suppression of innovation this website will highlight why Google need to be stopped.</p>
+  </a>
+  </div>
+  <div class="image-section">
+    <img src="images/i.png" alt="Image 1">
+  </div>
+</div>
+     </div>  
+<button id="backToTop" class="back-to-top">↑ Top</button>
+
+  
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Existing JavaScript for menu toggle
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navList = document.querySelector(".nav-list");
+
+    menuToggle.addEventListener("click", function () {
+      navList.classList.toggle("active");
+    });
+
+    // Scroll functionality for the "Back to Top" button
+    const backToTopButton = document.getElementById("backToTop");
+
+    // Show the button when the user scrolls down 100px
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > 100) {
+        backToTopButton.style.display = "block"; // Show the button
+      } else {
+        backToTopButton.style.display = "none"; // Hide the button
+      }
+    });
+
+    // Scroll back to the top when the button is clicked
+    backToTopButton.addEventListener("click", function () {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth", // Smooth scrolling
+      });
+    });
+
+    // Existing scroll functionality for the scroll arrow
+    document.getElementById("scrollArrow").addEventListener("click", function () {
+      window.scrollTo({
+        top: window.innerHeight, // Scroll to the next section
+        behavior: "smooth", // Smooth scrolling
+      });
+    });
+  });
+</script>
+</body>
+</html>

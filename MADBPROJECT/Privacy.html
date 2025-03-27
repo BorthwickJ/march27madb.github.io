@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Use this section for your webpage metadata - more detail https://www.w3schools.com/html/html_head.asp -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Homepage</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	
+    <link rel="stylesheet" href="css/test.css">
+
+
+
+
+    
+</head>
+
+<body class="hero-4">
+
+	
+
+        
+   <nav class="navbar">
+    
+    <button class="menu-toggle">&#9776;</button> <!-- Hamburger Menu for Mobile -->
+    <ul class="nav-list">
+        <li class="nav-item"><a href="HomePage.html">Home</a></li>
+        <li class="nav-item"><a href="About.html">About</a></li>
+        <li class="nav-item"><a href="Rise of Google.html">Rise of Google</a></li>
+        <li class="nav-item"><a href="Privacy.html">Privacy Issues</a></li>
+        <li class="nav-item"><a href="Innovation.html">Suppression of Innovation</a></li>
+    </ul>
+</nav>
+
+        
+   <section class="hero">
+       
+           <h1>Your Data - Is it yours?</h1>
+       <p>Scroll down to learn the shocking truth of Googles data policy.</p>
+   
+    
+        <div class="scroll-arrow" id="scrollArrow">
+    &#x2193; <!-- Downward Arrow Character -->
+  </div>
+    
+    </section>
+   
+	
+    <div class="content-row">
+  <div class="text-section">
+  <h3 class="content-heading">Street View Scandal</h3>
+    <p>Although Google is one of the most popular and dominant search engines with many appealing features, they have faced increased scrutiny over the years in relation to data privacy. Throughout their history, Google have had many different problems involving data privacy. In 2010 Google committed a “significant breach” of the Data Protection Act when gathering images for street view, a feature of Google maps. It was reported that Google collected full emails and passwords from users without permission (Halliday, 2010).   As a result of this, Google were made to sign a document ensuring that no further data breaches will occur and were ordered to delete the data that was collected (Halliday 2010).</p>
+     <p>However, in 2012 it was revealed when a report by the FCC (Federal Communications Commission) was published by The Los Angeles Times which stated that Google knew about the street view data leak. The report details that the main engineer involved with designing the street view project intentionally gathered the data so it could be analysed (Epstein and Waugh, 2012).  This highlights the inherit risks of Google and their data harvesting. By claiming the leak was an accident, when they knew it was intentional raises concerns that this data mishandling could still be handling. This street view leak wasn’t an isolated incident either, there have been others. 
+
+     </p>  
+
+  </div>
+  <div class="image-section">
+    <img src="images/streetview.png" alt="Image 1" />
+  </div>
+</div>
+
+<div class="content-row reverse">
+  <div class="text-section">
+   
+    <h3 class="content-heading">Google+ Data Leak</h3>
+    <p>
+      In 2018 another major data leak came to light involving Google. Google’s own social media website, Google+, came under extreme scrutiny revolving around data privacy. A bug in the API for Google+ allowed third-party app developers to access user data of both users who had granted Google permission, and the friends of these users. This is similar to the Facebook and Cambridge Analytica data leak. A blog post after the leak by Google disclosed that up to <b>500,000 accounts</b> may have been affected by the leak, with up to <b>438 different applications</b> having access to the data. (Wong and Solon, 2018).
+      
+      </p>
+      
+      <p>However, it got worse for Google on 7th November of 2018 when they released an update for Google+. In this update, a bug was present which is estimated to have affected <b>52.5 million user accounts.</b> Although the bug was fixed and corrected by the 13th of November, users private and <b>personal data was vulnerable for 6 days</b>(Newman, 2018) . Google claim that no data was misused during this time, but as proven by the street view scandal of 2010, Google like to lie. Shortly after these massive data leaks in 2018, Google+ was shut down on the 2nd April 2019 (Google, 2019.) </p>
+      </div>
+    <div class="image-section">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/Ucpl83PB1Xc?si=_MelRSyVLn_wLLEx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+  </div>
+
+  <div class="content-row">
+  <div class="text-section">
+    <h3 class="content-heading">Repercussions</h3>
+<p>As expected, Google has faced serious repercussions for their mishandling of user data. In 2019 Google were fined <b>£44 million</b>, a record at the time, by CNIL, a French data protection company. CNIL’s reasoning for the fine was because Google made it difficult for its users to find essential information about their data such as data storage periods, data-processing purposes, and the way in which personal data is used for tailored advertisements (Hern, 2019). </p>
+<p>This wasn't the only fine that was incurred by CNIL with them fining Google again in 2021 for <b>$150 million</b> (approximately £116 million). The reasoning for this second fine was due to the mechanics of accepting cookies on the Google internet browser. CNIL determined that it was harder for user to refuse cookies than it was to accept, breaching guidelines (Jowitt, 2022). </p>
+
+</div>
+
+<div class="image-section">
+
+  <img src="images/cnil.png" alt="Image 1" />
+
+
+</div>
+
+
+</div>
+    
+<button id="backToTop" class="back-to-top">↑ Top</button>
+
+   
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Existing JavaScript for menu toggle
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navList = document.querySelector(".nav-list");
+
+    menuToggle.addEventListener("click", function () {
+      navList.classList.toggle("active");
+    });
+
+    // Scroll functionality for the "Back to Top" button
+    const backToTopButton = document.getElementById("backToTop");
+
+    // Show the button when the user scrolls down 100px
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > 100) {
+        backToTopButton.style.display = "block"; // Show the button
+      } else {
+        backToTopButton.style.display = "none"; // Hide the button
+      }
+    });
+
+    // Scroll back to the top when the button is clicked
+    backToTopButton.addEventListener("click", function () {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth", // Smooth scrolling
+      });
+    });
+
+    // Existing scroll functionality for the scroll arrow
+    document.getElementById("scrollArrow").addEventListener("click", function () {
+      window.scrollTo({
+        top: window.innerHeight, // Scroll to the next section
+        behavior: "smooth", // Smooth scrolling
+      });
+    });
+  });
+</script>
+</body>
+</html>

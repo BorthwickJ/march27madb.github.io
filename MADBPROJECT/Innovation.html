@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Use this section for your webpage metadata - more detail https://www.w3schools.com/html/html_head.asp -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Homepage</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	
+    <link rel="stylesheet" href="css/test.css">
+
+
+
+
+    
+</head>
+
+<body class="hero-5">
+
+	
+
+        
+   <nav class="navbar">
+   
+    <button class="menu-toggle">&#9776;</button> <!-- Hamburger Menu for Mobile -->
+    <ul class="nav-list">
+        <li class="nav-item"><a href="HomePage.html">Home</a></li>
+        <li class="nav-item"><a href="About.html">About</a></li>
+        <li class="nav-item"><a href="Rise of Google.html">Rise of Google</a></li>
+        <li class="nav-item"><a href="Privacy.html">Privacy Issues</a></li>
+        <li class="nav-item"><a href="Innovation.html">Suppression of Innovation</a></li>
+    </ul>
+</nav>
+
+        
+   <section class="hero">
+       
+           <h1>Suppression of Innovation</h1>
+       <p>Scroll down to learn about how Google has suppressed innovation in the search engine industry</p>
+   
+    
+        <div class="scroll-arrow" id="scrollArrow">
+    &#x2193; <!-- Downward Arrow Character -->
+  </div>
+    
+    </section>
+   
+	
+    <div class="content-row">
+  <div class="text-section">
+    <h3 class="content-heading">Ad Vender Companies</h3>
+    <p>
+      Throughout their history Google have acquired many companies, some being smaller companies making innovations in the industry, and some being direct competitors. The first area that will be looked at is digital advertising. In 2007, Google acquired digital ad vendor DoubleClick for $3.1 billion. Although Google were significantly smaller than the competitors at the time Yahoo and Microsoft, this purchase signalled their intent.</p>
+      
+      <p>A former member of the US Federal Trade Commission reflected on the deal, and stated that if he knew in 2007 what he knew now about Google, he would have challenged the acquisition. In the years after this initial acquisition, Google bought many other rival ad vendors such as AdMob, Invite Media, and Sprinks.
+
+      </p>
+        
+
+  </div>
+  <div class="image-section">
+    <img src="images/monopoly1.png" alt="Image 1" />
+  </div>
+</div>
+
+<div class="content-row reverse">
+  <div class="text-section">
+    <h3 class="content-heading">Market Share Dominance</h3>
+      <p> Another way in which Google has suppressed innovation from other search engines is due to their immense market share. In 2021 Google paid a total of $26.3 billion to be the default search engine in multiple different browsers and devices, such as Apple products.</p>
+     
+      <p>Another major section of the Google ecosystem is Gmail. Similarly to Android, Gmail was launched in 2007. Initially, Google were seen as an innovator within the email industry particularly with data security. In 2007 Google acquired Postini, which was an email security firm, for a massive fee of <b>$625 million</b> to improve the security of Gmail for users. </p>
+      <p>The final main service owned by Google is Google Maps. This service allows users to get directions, restaurant and shop recommendations, and look all around the world. The service was a major success for Google, with an estimated <b>1 billion monthly users as of 2019.</b></p>
+  </div>
+  <div class="image-section">
+    <img src="images/dominance.png" alt="Image 2" />
+  </div>
+</div>
+    
+<button id="backToTop" class="back-to-top">↑ Top</button>
+
+   
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Existing JavaScript for menu toggle
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navList = document.querySelector(".nav-list");
+
+    menuToggle.addEventListener("click", function () {
+      navList.classList.toggle("active");
+    });
+
+    // Scroll functionality for the "Back to Top" button
+    const backToTopButton = document.getElementById("backToTop");
+
+    // Show the button when the user scrolls down 100px
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > 100) {
+        backToTopButton.style.display = "block"; // Show the button
+      } else {
+        backToTopButton.style.display = "none"; // Hide the button
+      }
+    });
+
+    // Scroll back to the top when the button is clicked
+    backToTopButton.addEventListener("click", function () {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth", // Smooth scrolling
+      });
+    });
+
+    // Existing scroll functionality for the scroll arrow
+    document.getElementById("scrollArrow").addEventListener("click", function () {
+      window.scrollTo({
+        top: window.innerHeight, // Scroll to the next section
+        behavior: "smooth", // Smooth scrolling
+      });
+    });
+  });
+</script>
+</body>
+</html>
